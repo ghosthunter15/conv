@@ -5,6 +5,6 @@
 ##########################
 
 conv:
-	cc -g -B /data/data/com.termux/files/home/bin -o conv conv.cpp
+	g++ -g -B /data/data/com.termux/files/home/bin -o conv conv.cpp
 
  
