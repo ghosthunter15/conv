@@ -4,6 +4,9 @@
 using namespace std;
 
 //func defs
+
+void to_kel();
+
 void to_kel()
 {
 	//add submenu
@@ -62,8 +65,9 @@ void to_kel()
 		default:
 			cout << "Enter another number.\n";
 
-		//return 0;
 	}
+	
+//return 0;
 }
 
 int main(){
@@ -139,7 +143,7 @@ int main(){
 
    default:
      cout << endl;
-     cout << "Please enter a different number.";
+     cout << "Please enter a different number.\n";
     
     }
     
