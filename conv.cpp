@@ -5,9 +5,9 @@ using namespace std;
 
 //func defs
 
-void to_kel();
+/*int to_kel();
 
-void to_kel()
+int to_kel()
 {
 	//add submenu
 	//fah=kel_f * 9/5 - 459.67
@@ -67,8 +67,8 @@ void to_kel()
 
 	}
 	
-//return 0;
-}
+	return 0;
+}*/
 
 int main(){
     
@@ -76,6 +76,7 @@ int main(){
   float weight;
   float fah;
   float cel;
+  float kel;
     
   cout << "Weight Convert: " << endl;
   cout << endl;
@@ -83,16 +84,24 @@ int main(){
   cout << "2: kgs to lbs" << endl;
   cout << "3: fah to cel\n"; // may error
   cout << "4: cel to fah\n"; // may error
-  cout << "5: kelvin converter.\n"; //may error
+  //cout << "5: kelvin converter.\n"; //may error
+  cout << "5: kel to fah\n";
+  cout << "6: fah to kel\n";
+  cout << "7: cel to kel\n";
+  cout << "8: kel to cel\n";
   cout << endl;
     
   cout << "Please enter an option: ";
   cin >> option;
     
-  // 1lb = 0.454kg
-  // 1kg = 2.205lb
-  // cel = (fah - 32) * 5/9
-  // fah = cel * 9/5 + 32
+  	// 1lb = 0.454kg
+  	// 1kg = 2.205lb
+  	// cel = (fah - 32) * 5/9 
+	// fah = cel * 9/5 + 32
+ 	// fah=kel * 9/5 - 459.67
+        // kel=(fah + 459.67 * 5/9
+        // kel=cel + 273.15
+        // cel=kel - 273.15
 
   switch (option){
     
@@ -138,8 +147,40 @@ int main(){
       break;
 
    case 5:
-	to_kel();
-	break;
+        cout << "Enter temp in kel: ";
+        cin >> kel;
+ 
+	fah = kel * 9/5 - 459.67;      
+ 	cout << endl;
+        cout << fah << "F°\n";
+        break;
+
+   case 6:
+        cout << "Enter temp in fah: ";
+        cin >> fah;
+ 
+        kel = (fah + 459.67) * 5/9;
+        cout << endl;
+        cout << kel << "K°\n";
+        break;
+
+   case 7:
+        cout << "Enter temp in cel: ";
+        cin >> cel;
+
+        kel = cel + 273.15;
+        cout << endl;
+        cout << kel << "K°\n";
+        break;
+
+   case 8:                                                    
+	cout << "Enter temp in kel: ";
+        cin >> kel;
+                          
+	cel = kel - 273.15;
+        cout << endl;
+        cout << cel << "C°\n";
+        break;
 
    default:
      cout << endl;
@@ -150,4 +191,4 @@ int main(){
     
 
   return 0;
-}
+};
