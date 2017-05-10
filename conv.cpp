@@ -173,7 +173,7 @@ int main(){
         cout << kel << "K°\n";
         break;
 
-   case 8:                                                    
+   case 8:                                          
 	cout << "Enter temp in kel: ";
         cin >> kel;
                           
